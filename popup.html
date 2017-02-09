@@ -1,0 +1,41 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 300px;
+      }
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <h1></h1>
+    
+    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTM1LjMxIDE1Ljg2bC0xMS4zMS0xMS4zMi0xMS4zMSAxMS4zMmMtNi4yNSA2LjI1LTYuMjUgMTYuMzggMCAyMi42MyAzLjEyIDMuMTIgNy4yMiA0LjY5IDExLjMxIDQuNjlzOC4xOS0xLjU2IDExLjMxLTQuNjljNi4yNS02LjI1IDYuMjUtMTYuMzggMC0yMi42M3ptLTExLjMxIDIzLjMxYy0zLjIxIDAtNi4yMi0xLjI1LTguNDgtMy41Mi0yLjI3LTIuMjYtMy41Mi01LjI3LTMuNTItOC40OHMxLjI1LTYuMjIgMy41Mi04LjQ5bDguNDgtOC40OHYyOC45N3oiLz48L3N2Zz4=">
+
+    
+    <p>Density : <span id="cnt">5</span> <input type="range" value="5" min="0" max="10" id="slider"></p>
+    
+
+    <script src="popup.js"></script>
+  </body>
+</html>
